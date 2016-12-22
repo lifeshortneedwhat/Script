@@ -1,6 +1,0 @@
-c:\users\abraham\documents\visual studio 2015\Projects\Test\Test\bin\Debug\Test.exe.config
-C:\Users\Abraham\Documents\Visual Studio 2015\Projects\Test\Test\obj\Debug\Test.csprojResolveAssemblyReference.cache
-C:\Users\Abraham\Documents\Visual Studio 2015\Projects\Test\Test\bin\Debug\Test.exe
-C:\Users\Abraham\Documents\Visual Studio 2015\Projects\Test\Test\bin\Debug\Test.pdb
-C:\Users\Abraham\Documents\Visual Studio 2015\Projects\Test\Test\obj\Debug\Test.exe
-C:\Users\Abraham\Documents\Visual Studio 2015\Projects\Test\Test\obj\Debug\Test.pdb
