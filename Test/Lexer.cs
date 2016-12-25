@@ -36,7 +36,7 @@ namespace Test
                    }), _line));
 
                 }
-                else if (IsLetter(c))
+                else if (IsLetter(c) || IsSymbol(c))
                 {
                     tokens.Add(new DefineToken(Scan(x =>
                    {
@@ -88,6 +88,11 @@ namespace Test
             }
 
             return sb.ToString();
+        }
+
+        public bool IsSymbol(char c)
+        {
+            return c == '=';
         }
 
         public bool IsLetter(char c)

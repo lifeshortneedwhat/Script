@@ -11,7 +11,7 @@ namespace Test
     {
         static void Main(string[] args)
         {
-            var reader = File.OpenText(@"C:\Users\Abraham\Desktop\12121212.txt");
+            var reader = File.OpenText(@"C:\Users\Cell\Desktop\job.txt");
 
             var lex = new Lexer();
 
