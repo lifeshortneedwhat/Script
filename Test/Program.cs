@@ -11,22 +11,16 @@ namespace Test
     {
         static void Main(string[] args)
         {
-            var reader = File.OpenText(@"C:\Users\Cell\Desktop\job.txt");
+            //var path = @"C:\Users\Cell\Desktop\job.txt";
 
-            var lex = new Lexer();
+            var path = @"C:\Users\Abraham\Desktop\job.txt";
 
-            while (true)
+            var lex = new Lexer(path);
+
+            lex.Parse().ToList().ForEach(x =>
             {
-                var tokens = lex.Read(reader.ReadLine());
-
-                tokens.ForEach(x =>
-                {
-                    Console.WriteLine($"token 行号  {x.Line}  类型  {x.Type}     值  {x.Text}");
-                });
-
-                if (reader.EndOfStream)
-                    break;
-            }
+                Console.WriteLine($"token 行号  {x.Line}  类型  {x.Type}     值  {x.Text}");
+            });
         }
     }
 }

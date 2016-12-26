@@ -10,7 +10,28 @@ namespace Test
 {
     public class Lexer
     {
-        public List<Token> Read(string input)
+        public IEnumerable<Token> Parse()
+        {
+            var reader = File.OpenText(_filePath);
+
+            while (true)
+            {
+                var text = reader.ReadLine();
+                var tokens = Read(text);
+
+                foreach (var item in tokens)
+                {
+                    yield return item;
+                }
+
+                if (reader.EndOfStream)
+                    break;
+            }
+
+            reader.Dispose();
+        }
+
+        private List<Token> Read(string input)
         {
             _input = input;
             _index = 0;
@@ -126,11 +147,12 @@ namespace Test
         }
 
 
-        public Lexer()
+        public Lexer(string path)
         {
             _input = string.Empty;
             _index = 0;
             _line = 0;
+            _filePath = path;
         }
 
         private int _line;
@@ -138,6 +160,8 @@ namespace Test
         private int _index;
 
         private string _input;
+
+        private string _filePath;
 
     }
 }
